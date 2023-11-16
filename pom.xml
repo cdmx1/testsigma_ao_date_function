@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.cdmx.testsigma.addons</groupId>
-    <artifactId>add_on_for_countries_and_currencies</artifactId>
+    <artifactId>date_functions</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -64,7 +64,7 @@
 
     </dependencies>
     <build>
-        <finalName>add_on_for_countries_and_currencies</finalName>
+        <finalName>date_functions</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
