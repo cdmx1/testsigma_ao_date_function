@@ -19,8 +19,8 @@ import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Data
-@Action(actionText = "Generate the random date between From testdata1 and two testdata2 and store in a runtime variable",
-        description = "This addon will generate the random date between two dates in yyyy-MM-dd'T'HH:mm'Z' format and store in a runtime variable",
+@Action(actionText = "Generate the random date between From date testdata1 and to date testdata2 and store in a runtime variable",
+        description = "This addon will generate the random date between two dates in yyyy-MM-dd format and store in a runtime variable",
         applicationType = ApplicationType.WEB)
 public class GetBetweenDates extends WebAction {
 
@@ -49,11 +49,11 @@ public class GetBetweenDates extends WebAction {
     	String testdata = testData1.getValue().toString();
         String testdata1 = testData2.getValue().toString();
         String var_between_date;
-        Date date1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'").parse(testdata);
-        Date date2=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'").parse(testdata1);  
+        Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(testdata);
+        Date date2=new SimpleDateFormat("yyyy-MM-dd").parse(testdata1);  
         //your custom code starts here
      	 Date randomDate = new Date(ThreadLocalRandom.current().nextLong(date1.getTime(), date2.getTime()));
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");  
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");  
         String strDate = dateFormat.format(randomDate);  
         var_between_date = strDate;
        
